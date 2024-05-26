@@ -99,9 +99,9 @@ img {
     width: auto;
 } /*aqui termina el header*/
 
-h1 {font-size: 4em;}
+h1 {font-size: 3em;}
 br {font-size: 3.5em;}
-h2 {font-size: 2.7em;}
+h2 {font-size: 2.5em;}
 h3 {font-size: 2em;}
 p  {font-size: 1.25em;}
 
@@ -141,13 +141,55 @@ p  {font-size: 1.25em;}
     flex-wrap: wrap;
     margin: 25px 0;
 
-    img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 10px 0;
+    .item {
+        position: relative;
+        overflow: hidden;
+        max-width: 300px;
+        margin: 10px;
+
+        img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+
+            h3 {
+                color: #fff;
+                font-size: 24px;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s ease, transform 0.5s ease;
+            }
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+        }
+
+        &:hover .overlay {
+            opacity: 1;
+
+            h3 {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     }
 }
+
 
 #about {
     display: flex;

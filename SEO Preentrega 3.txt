@@ -1,7 +1,0 @@
-1. Inclui todos los alt en las imagenes.
-2. Agregue todos los meta Keywords en todas las paginas.
-3. Agregue todos los meta description en todas las paginas.
-5. Reduci un poco algunas imagenes de tamaño.
-
-6. Traspase de css a sass.
-7. Mejore alunos textos, signos de puntuacion,etc. 
